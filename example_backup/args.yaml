@@ -1,0 +1,13 @@
+exe: "/usr/bin/rclone"
+transfers: 50
+checkers: 8
+retries: 3
+timeout: "100s"
+flags: [
+  '--progress'
+]
+
+
+
+
+
