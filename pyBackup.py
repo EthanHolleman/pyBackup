@@ -2,6 +2,7 @@ from pyBackup.transfers import process_targets, execute_transfers
 from pyBackup.config import infer_config_filepaths, read_args_dict
 from pyBackup.args import get_args
 from pyBackup.logging import make_default_logger, assign_log_path
+from pyBackup.manager import create_file_report
 
 from pathlib import Path
 
@@ -17,6 +18,7 @@ def main():
     transfers = process_targets(transfer_path)
     execute_transfers(transfers, args_dict)
     logger.info(f'Completed backup of {len(transfers)} transfers.')
+    # create_file_report('/home/ethan/Documents/github/snake-backup/example_backup')
 
 if __name__ == '__main__':
     main()

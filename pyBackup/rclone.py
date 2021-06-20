@@ -15,5 +15,6 @@ def run_transfer(transfer, config_dict):
     cmd = make_rclone_cmd(transfer, config_dict)
     print(' '.join(cmd))
     return subprocess.run(cmd)
+    
 
 
